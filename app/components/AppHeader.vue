@@ -4,8 +4,8 @@ const colorMode = useColorMode()
 
 const navItems = [
   { label: 'Producto', to: '/#producto' },
-  { label: 'Cumplimiento', to: '/#cumplimiento' },
-  { label: 'Pre-auditoría', to: '/#preauditoria' },
+  { label: 'Funcionalidades', to: '/#funcionalidades' },
+  { label: 'Precios', to: '/#precios' },
 ]
 
 function toggleColorMode() {
@@ -19,12 +19,8 @@ function toggleColorMode() {
       <div class="flex items-center justify-between gap-x-4">
 
         <!-- Logo -->
-        <NuxtLink to="/" class="flex-none" aria-label="Documentia">
-          <img
-            :src="colorMode.value === 'dark' ? '/logo-dark.png' : '/logo-light.png'"
-            alt="Documentia"
-            class="h-7 w-auto object-contain"
-          />
+        <NuxtLink to="/" class="flex-none" aria-label="Pomely">
+          <span class="text-xl font-black tracking-tight text-orange-600">pomely</span>
         </NuxtLink>
 
         <!-- Desktop nav -->
@@ -60,8 +56,8 @@ function toggleColorMode() {
           </button>
 
           <a
-            href="mailto:hola@documentia.app"
-            class="py-1.5 px-3.5 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg bg-violet-700 text-white hover:bg-violet-800 shadow-sm hover:shadow-none transition-all focus:outline-none"
+            href="mailto:hola@pomely.cl"
+            class="py-1.5 px-3.5 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg bg-orange-600 text-white hover:bg-orange-700 shadow-sm hover:shadow-none transition-all focus:outline-none"
           >
             Solicitar demo
           </a>
@@ -99,8 +95,8 @@ function toggleColorMode() {
         </NuxtLink>
         <div class="mt-2 pt-2 border-t border-stone-100 dark:border-stone-800">
           <a
-            href="mailto:hola@documentia.app"
-            class="w-full py-2.5 px-3 flex justify-center text-sm font-medium rounded-lg bg-violet-700 text-white hover:bg-violet-800 transition-colors"
+            href="mailto:hola@pomely.cl"
+            class="w-full py-2.5 px-3 flex justify-center text-sm font-medium rounded-lg bg-orange-600 text-white hover:bg-orange-700 transition-colors"
           >
             Solicitar demo
           </a>
