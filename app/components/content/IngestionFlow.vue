@@ -43,13 +43,13 @@
             <div class="absolute top-0 w-px h-5 bg-stone-200 dark:bg-stone-700" style="left:87.5%" />
             <div class="absolute h-px bg-stone-200 dark:bg-stone-700" style="top:20px; left:12.5%; right:12.5%" />
             <div class="absolute left-1/2 -translate-x-1/2 w-px h-5 bg-stone-200 dark:bg-stone-700" style="top:20px" />
-            <div class="absolute left-1/2 top-[38px] -translate-x-1/2 w-2 h-2 rounded-full bg-orange-400 ring-2 ring-stone-50 dark:ring-stone-900" />
+            <div class="absolute left-1/2 top-[38px] -translate-x-1/2 w-2 h-2 rounded-full bg-rose-400 ring-2 ring-stone-50 dark:ring-stone-900" />
           </div>
 
           <!-- Motor de cotización -->
           <div class="w-full max-w-xs rounded-2xl bg-stone-900 dark:bg-stone-800 border border-stone-700 shadow-xl z-10 overflow-hidden">
             <div class="px-4 py-3 flex items-center gap-3 border-b border-stone-700/60">
-              <div class="w-8 h-8 rounded-xl bg-orange-600 flex items-center justify-center shrink-0 relative">
+              <div class="w-8 h-8 rounded-xl bg-rose-600 flex items-center justify-center shrink-0 relative">
                 <UIcon name="i-lucide-hard-drive-upload" class="size-4 text-white" />
                 <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 ring-2 ring-stone-900 animate-pulse" />
               </div>
@@ -60,37 +60,37 @@
             </div>
             <div class="px-4 py-3 space-y-2">
               <div v-for="doc in processingDocs" :key="doc.name" class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full shrink-0" :class="doc.done ? 'bg-green-400' : 'bg-orange-400 animate-pulse'" />
+                <div class="w-1.5 h-1.5 rounded-full shrink-0" :class="doc.done ? 'bg-green-400' : 'bg-rose-400 animate-pulse'" />
                 <span class="text-[10px] text-stone-400 flex-1 truncate">{{ doc.name }}</span>
-                <span class="text-[9px]" :class="doc.done ? 'text-green-400' : 'text-orange-400'">{{ doc.status }}</span>
+                <span class="text-[9px]" :class="doc.done ? 'text-green-400' : 'text-rose-400'">{{ doc.status }}</span>
               </div>
             </div>
             <div class="px-4 py-2 border-t border-stone-800 flex items-center justify-between">
               <span class="text-[10px] text-stone-500">Cotizaciones este mes</span>
-              <span class="text-xs font-bold text-orange-400 font-mono">1.243</span>
+              <span class="text-xs font-bold text-rose-400 font-mono">1.243</span>
             </div>
           </div>
 
           <!-- Connector motor → IA -->
           <div class="relative flex flex-col items-center z-0">
             <div class="w-px h-5 bg-stone-200 dark:bg-stone-700" />
-            <div class="w-2 h-2 rounded-full bg-orange-400 ring-2 ring-stone-50 dark:ring-stone-900" />
+            <div class="w-2 h-2 rounded-full bg-rose-400 ring-2 ring-stone-50 dark:ring-stone-900" />
             <div class="w-px h-5 bg-stone-200 dark:bg-stone-700" />
           </div>
 
           <!-- IA Motor -->
-          <div class="w-full max-w-xs rounded-2xl bg-orange-950 border border-orange-800/60 shadow-lg shadow-orange-900/30 z-10 overflow-hidden">
+          <div class="w-full max-w-xs rounded-2xl bg-rose-950 border border-rose-800/60 shadow-lg shadow-rose-900/30 z-10 overflow-hidden">
             <div class="px-4 py-3 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-xl bg-orange-600/80 flex items-center justify-center shrink-0">
+              <div class="w-8 h-8 rounded-xl bg-rose-600/80 flex items-center justify-center shrink-0">
                 <UIcon name="i-lucide-brain-circuit" class="size-4 text-white" />
               </div>
               <div class="flex-1 min-w-0">
-                <p class="text-xs font-bold text-orange-100">IA · Motor de cotización</p>
-                <p class="text-[10px] text-orange-400">Catálogo · Precios · Historial</p>
+                <p class="text-xs font-bold text-rose-100">IA · Motor de cotización</p>
+                <p class="text-[10px] text-rose-400">Catálogo · Precios · Historial</p>
               </div>
             </div>
             <div class="px-4 pb-3 flex flex-wrap gap-1.5">
-              <span v-for="tag in aiTags" :key="tag" class="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-orange-900/60 text-orange-300 border border-orange-800/50">{{ tag }}</span>
+              <span v-for="tag in aiTags" :key="tag" class="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-rose-900/60 text-rose-300 border border-rose-800/50">{{ tag }}</span>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
           <h2 class="font-bold text-2xl md:text-3xl text-stone-900 dark:text-stone-100 leading-snug">
             Pomely escucha<br />donde llegan los pedidos.
           </h2>
-          <p class="mt-1 text-lg font-semibold text-orange-600 dark:text-orange-400">
+          <p class="mt-1 text-lg font-semibold text-rose-600 dark:text-rose-400">
             La IA entiende y cotiza.
           </p>
           <p class="mt-4 text-stone-500 dark:text-stone-400 leading-relaxed">
@@ -138,10 +138,10 @@
             <div
               v-for="feat in features"
               :key="feat.title"
-              class="group p-4 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-orange-200 dark:hover:border-orange-800 transition-all duration-200"
+              class="group p-4 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-rose-200 dark:hover:border-rose-800 transition-all duration-200"
             >
-              <div class="w-8 h-8 rounded-lg bg-stone-50 dark:bg-stone-700 border border-stone-200 dark:border-stone-600 flex items-center justify-center mb-3 group-hover:bg-orange-50 group-hover:border-orange-100 transition-colors">
-                <UIcon :name="feat.icon" class="size-4 text-stone-400 group-hover:text-orange-600 transition-colors" />
+              <div class="w-8 h-8 rounded-lg bg-stone-50 dark:bg-stone-700 border border-stone-200 dark:border-stone-600 flex items-center justify-center mb-3 group-hover:bg-rose-50 group-hover:border-rose-100 transition-colors">
+                <UIcon :name="feat.icon" class="size-4 text-stone-400 group-hover:text-rose-600 transition-colors" />
               </div>
               <p class="text-sm font-semibold text-stone-900 dark:text-stone-100 mb-1">{{ feat.title }}</p>
               <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">{{ feat.desc }}</p>

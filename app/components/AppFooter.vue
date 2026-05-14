@@ -7,12 +7,12 @@
 
         <!-- Brand -->
         <div class="col-span-2 md:col-span-2 flex flex-col gap-4">
-          <span class="text-xl font-black tracking-tight text-orange-500">pomely</span>
+          <span class="text-xl font-black tracking-tight text-rose-500">pomely</span>
           <p class="text-sm leading-relaxed text-stone-500 max-w-xs">
             Sistema de cotización con IA para equipos comerciales. Captura, cotiza y cierra más rápido.
           </p>
           <a href="mailto:hola@pomely.cl"
-            class="inline-flex items-center gap-2 text-sm text-orange-400 hover:text-orange-300 transition-colors w-fit">
+            class="inline-flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 transition-colors w-fit">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -61,7 +61,7 @@
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <span class="text-xs text-stone-600">© {{ new Date().getFullYear() }} Pomely. Todos los derechos reservados.</span>
         <div class="inline-flex items-center gap-2 text-xs text-stone-600">
-          <span class="w-1.5 h-1.5 rounded-full bg-orange-600 shadow-[0_0_0_2px_rgb(234_88_12_/_0.2)]" />
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-600 shadow-[0_0_0_2px_rgb(234_88_12_/_0.2)]" />
           Operando en Chile
         </div>
       </div>

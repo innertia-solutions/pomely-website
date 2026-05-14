@@ -123,7 +123,7 @@ const trustItems = [
 
     <!-- Glow naranja en la transición hero → body -->
     <div class="pointer-events-none absolute inset-x-0 top-[380px] -z-10 flex justify-center overflow-hidden" aria-hidden="true">
-      <div class="w-[900px] h-[500px] rounded-full bg-orange-500/10 dark:bg-orange-500/8 blur-[140px]" />
+      <div class="w-[900px] h-[500px] rounded-full bg-rose-500/10 dark:bg-rose-500/8 blur-[140px]" />
     </div>
 
     <ContentCustomHero

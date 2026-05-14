@@ -20,12 +20,12 @@
     <div class="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8 mx-auto text-center">
 
       <div class="mb-6 flex justify-center">
-        <UIcon name="i-lucide-trophy" class="size-12 text-orange-400" />
+        <UIcon name="i-lucide-trophy" class="size-12 text-rose-400" />
       </div>
 
       <h2 class="font-black text-3xl md:text-5xl text-white leading-tight mb-4">
         Empieza a cotizar con IA<br />
-        <span class="text-orange-400">hoy mismo.</span>
+        <span class="text-rose-400">hoy mismo.</span>
       </h2>
 
       <p class="text-stone-400 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
@@ -36,7 +36,7 @@
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href="mailto:hola@pomely.cl"
-          class="inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-base shadow-lg shadow-orange-900/40 hover:shadow-orange-800/50 transition-all"
+          class="inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-base shadow-lg shadow-rose-900/40 hover:shadow-rose-800/50 transition-all"
         >
           <span>Solicitar demo</span>
           <span aria-hidden="true">→</span>
@@ -55,7 +55,7 @@
 
 <script setup lang="ts">
 const colors = [
-  '#f97316', '#ea580c', '#fb923c', '#fdba74',
+  '#f43f5e', '#e11d48', '#fb7185', '#fda4af',
   '#fbbf24', '#34d399', '#60a5fa', '#e879f9',
   '#fff', '#d1d5db',
 ]

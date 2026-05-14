@@ -38,7 +38,7 @@
               >
                 <div class="flex items-center justify-between mb-1.5">
                   <span class="text-[10px] font-bold text-stone-400 uppercase tracking-wide">{{ card.client }}</span>
-                  <UIcon v-if="card.ai" name="i-lucide-brain-circuit" class="size-3 text-orange-500" />
+                  <UIcon v-if="card.ai" name="i-lucide-brain-circuit" class="size-3 text-rose-500" />
                 </div>
                 <p class="text-xs font-semibold text-stone-800 dark:text-stone-200 leading-snug mb-2">{{ card.title }}</p>
                 <div class="flex items-center gap-1.5">
@@ -55,7 +55,7 @@
       <div class="mt-5 grid sm:grid-cols-[auto_1fr] gap-5 items-start border border-stone-200 dark:border-stone-700 rounded-xl bg-stone-50 dark:bg-stone-900 p-5">
         <div class="flex items-start gap-3 sm:pr-5 sm:border-r sm:border-stone-200 dark:sm:border-stone-700">
           <div class="w-9 h-9 rounded-lg bg-stone-900 dark:bg-stone-800 border border-stone-800 dark:border-stone-700 flex items-center justify-center shrink-0">
-            <UIcon name="i-lucide-brain-circuit" class="size-4 text-orange-400" />
+            <UIcon name="i-lucide-brain-circuit" class="size-4 text-rose-400" />
           </div>
           <div>
             <p class="text-xs font-semibold text-stone-800 dark:text-stone-200">Pomely IA</p>

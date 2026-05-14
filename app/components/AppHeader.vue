@@ -20,7 +20,7 @@ function toggleColorMode() {
 
         <!-- Logo -->
         <NuxtLink to="/" class="flex-none" aria-label="Pomely">
-          <span class="text-xl font-black tracking-tight text-orange-600">pomely</span>
+          <span class="text-xl font-black tracking-tight text-rose-600">pomely</span>
         </NuxtLink>
 
         <!-- Desktop nav -->
@@ -57,7 +57,7 @@ function toggleColorMode() {
 
           <a
             href="mailto:hola@pomely.cl"
-            class="py-1.5 px-3.5 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg bg-orange-600 text-white hover:bg-orange-700 shadow-sm hover:shadow-none transition-all focus:outline-none"
+            class="py-1.5 px-3.5 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg bg-rose-600 text-white hover:bg-rose-700 shadow-sm hover:shadow-none transition-all focus:outline-none"
           >
             Solicitar demo
           </a>
@@ -96,7 +96,7 @@ function toggleColorMode() {
         <div class="mt-2 pt-2 border-t border-stone-100 dark:border-stone-800">
           <a
             href="mailto:hola@pomely.cl"
-            class="w-full py-2.5 px-3 flex justify-center text-sm font-medium rounded-lg bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+            class="w-full py-2.5 px-3 flex justify-center text-sm font-medium rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition-colors"
           >
             Solicitar demo
           </a>
