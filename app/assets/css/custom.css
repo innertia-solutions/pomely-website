@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Preline UI variants for interactive components */
+@source "../../../node_modules/preline/dist/*.js";
+@import "../../../node_modules/preline/variants.css";
+
+/* Custom styles for Documentia */
+
+/* Override Tailwind violet palette with Documentia brand purple (#a355d5) */
+@theme {
+  --color-violet-50: #f7f4f9;
+  --color-violet-100: #eee6f3;
+  --color-violet-200: #d9c6e5;
+  --color-violet-300: #c09dd6;
+  --color-violet-400: #ae7ccf;
+  --color-violet-500: #a65ed4;
+  --color-violet-600: #8a2fc5;
+  --color-violet-700: #6d259c;
+  --color-violet-800: #501b73;
+  --color-violet-900: #34114a;
+  --color-violet-950: #1e0a2d;
+}
+
+:root {
+    --color-primary-50: #f7f4f9;
+    --color-primary-100: #eee6f3;
+    --color-primary-200: #d9c6e5;
+    --color-primary-300: #c09dd6;
+    --color-primary-400: #ae7ccf;
+    --color-primary-500: #a65ed4;
+    --color-primary-600: #8a2fc5;
+    --color-primary-700: #6d259c;
+    --color-primary-800: #501b73;
+    --color-primary-900: #34114a;
+}
+
+/* Preline CSS token overrides — brand purple */
+:root,
+[data-theme="theme-default"] {
+  --color-primary: #6d259c;
+  --color-primary-hover: #501b73;
+  --color-primary-focus: #501b73;
+  --color-primary-foreground: #ffffff;
+  --color-primary-line: #501b73;
+}
+
+/* Marquee animation for logos strip */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-256px * 7)); }
+}
+@media (max-width: 768px) {
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-160px * 7)); }
+  }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth scroll global */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header styling to match landing */
+header {
+    backdrop-filter: blur(8px);
+}
+
+@font-face {
+    font-family: 'terminal';
+    src: url('@/assets/fonts/Lekton-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('@/assets/fonts/Silkscreen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.terminal-font {
+    font-family: 'terminal', monospace;
+}

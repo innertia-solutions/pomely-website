@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pomely-dev",
+      "runtimeExecutable": "/Users/guillermofarias/Sites/inertia/pomely-website/node_modules/.bin/nuxt",
+      "runtimeArgs": ["dev"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

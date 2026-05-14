@@ -1,0 +1,17 @@
+{
+  "name": "documentia-website",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.1.0",
+    "@nuxt/ui": "^3.0.0",
+    "nuxt": "^4.2.2",
+    "preline": "^4.2.0"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.107",
+    "sharp": "^0.34.5"
+  }
+}
