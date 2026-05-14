@@ -3,13 +3,13 @@
     <div class="max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto">
 
       <div class="max-w-xl mb-12">
-        <p class="mb-2 font-mono text-xs text-stone-400 uppercase tracking-widest">Por qué Documentia</p>
+        <p class="mb-2 font-mono text-xs text-stone-400 uppercase tracking-widest">Por qué Pomely</p>
         <h2 class="font-bold text-2xl md:text-3xl text-stone-900 dark:text-stone-100 leading-snug">
-          No eres una startup de EE.UU.<br />
-          Tampoco necesitas un ERP de 6 dígitos.
+          No más Excel.<br />
+          No más CRM que nadie usa.
         </h2>
         <p class="mt-3 text-stone-500 dark:text-stone-400 leading-relaxed">
-          El mercado tiene dos extremos: carpetas de Drive con Excel, o plataformas enterprise en inglés que cuestan $50k al año. Documentia existe en el medio — con la profundidad que una empresa auditada necesita, al precio que una empresa latinoamericana puede pagar.
+          El mercado tiene dos extremos: WhatsApp + Excel, o CRMs complejos que nadie termina de implementar. Pomely está en el medio — simple de arrancar, potente para escalar.
         </p>
       </div>
 
@@ -22,17 +22,15 @@
             ? 'bg-stone-900 dark:bg-stone-800 border-stone-700 shadow-xl'
             : 'bg-white dark:bg-stone-800/50 border-stone-200 dark:border-stone-700'"
         >
-          <!-- Label -->
           <div class="flex items-center gap-2 mb-5">
             <span
               class="text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
               :class="col.highlight
-                ? 'bg-violet-600 text-white'
+                ? 'bg-orange-600 text-white'
                 : 'bg-stone-100 dark:bg-stone-700 text-stone-500 dark:text-stone-400'"
             >{{ col.label }}</span>
           </div>
 
-          <!-- Items -->
           <ul class="space-y-3.5">
             <li
               v-for="item in col.items"
@@ -40,7 +38,7 @@
               class="flex items-start gap-3"
             >
               <span class="shrink-0 mt-0.5">
-                <svg v-if="item.type === 'yes'" class="size-4 text-violet-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg v-if="item.type === 'yes'" class="size-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <svg v-else-if="item.type === 'no'" class="size-4 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -65,36 +63,36 @@
 <script setup lang="ts">
 const columns = [
   {
-    label: 'Drive + Excel',
+    label: 'Excel + WhatsApp',
     highlight: false,
     items: [
-      { type: 'no', text: 'Sin historial entre auditorías' },
-      { type: 'no', text: 'Versiones por correo, sin control' },
-      { type: 'no', text: 'Búsqueda imposible antes del auditor' },
-      { type: 'no', text: 'Evidencia dispersa sin trazabilidad' },
-      { type: 'partial', text: 'Costo casi cero, pero te cobra en tiempo' },
+      { type: 'no', text: 'Sin trazabilidad de cotizaciones' },
+      { type: 'no', text: 'Cada vendedor cotiza a su manera' },
+      { type: 'no', text: 'No hay seguimiento automático' },
+      { type: 'no', text: 'Métricas imposibles de calcular' },
+      { type: 'partial', text: 'Costo cero, pero te cobra en caos y tiempo perdido' },
     ],
   },
   {
-    label: 'Documentia',
+    label: 'Pomely',
     highlight: true,
     items: [
-      { type: 'yes', text: 'Programas de cumplimiento con historial completo' },
-      { type: 'yes', text: 'Campañas comparables entre ciclos' },
-      { type: 'yes', text: 'Copiloto IA sobre tu contexto normativo' },
-      { type: 'yes', text: 'Trazabilidad auditada de cada acción' },
-      { type: 'yes', text: 'Hecho para industria latinoamericana, precio que tiene sentido' },
+      { type: 'yes', text: 'IA arma la cotización en segundos' },
+      { type: 'yes', text: 'Flujos y estados configurables por empresa' },
+      { type: 'yes', text: 'WhatsApp, Gmail y Outlook integrados' },
+      { type: 'yes', text: 'Seguimiento automático con alertas' },
+      { type: 'yes', text: 'Listo en minutos, no en meses' },
     ],
   },
   {
-    label: 'ISOTools / AuditBoard',
+    label: 'CRM / Otros cotizadores',
     highlight: false,
     items: [
-      { type: 'partial', text: 'Gestión documental básica disponible' },
-      { type: 'no', text: '$30k–$150k USD al año' },
-      { type: 'no', text: 'Implementación de 3–6 meses' },
-      { type: 'no', text: 'En inglés, pensado para EEUU y Europa' },
-      { type: 'no', text: 'Sin IA relevante para operación industrial' },
+      { type: 'no', text: 'Sin IA que arme cotizaciones automáticamente' },
+      { type: 'partial', text: 'Flujos básicos, difíciles de adaptar' },
+      { type: 'no', text: 'Sin integración real con WhatsApp' },
+      { type: 'partial', text: 'Seguimiento manual o básico' },
+      { type: 'no', text: 'Meses de implementación y configuraciones infinitas' },
     ],
   },
 ]

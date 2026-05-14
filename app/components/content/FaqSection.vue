@@ -1,7 +1,6 @@
 <template>
   <section class="py-16 md:py-24 bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
     <div class="max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto">
-      <!-- Heading -->
       <div class="mb-10 max-w-xl mx-auto text-center">
         <h2 class="font-bold text-2xl md:text-3xl text-stone-900 dark:text-stone-100">
           Preguntas frecuentes
@@ -11,7 +10,6 @@
         </p>
       </div>
 
-      <!-- Accordion -->
       <div class="max-w-2xl mx-auto divide-y divide-stone-200 dark:divide-stone-700">
         <div
           v-for="(item, index) in faqs"
@@ -55,24 +53,28 @@ function toggle(index: number) {
 
 const faqs = [
   {
-    q: '¿Para qué tipo de empresas es Documentia?',
-    a: 'Documentia está diseñado para empresas que se someten a auditorías externas o internas bajo normas ISO (9001, 14001, 45001), SGI, u otras certificaciones. Agroindustria, minería, logística, manufactura y proveedores certificados son los casos de uso más comunes.',
+    q: '¿Necesito integrar mi ERP para usar Pomely?',
+    a: 'No. Pomely funciona de forma independiente desde el primer día. Si tienes un ERP, puedes conectarlo vía API para sincronizar el catálogo de productos y precios — pero no es un requisito para empezar.',
   },
   {
-    q: '¿Reemplaza a nuestro sistema de gestión actual?',
-    a: 'No necesariamente. Documentia se puede integrar como capa de control documental y cumplimiento sobre lo que ya tienen. También puede reemplazar flujos en carpetas de red, Drive o correo donde hoy no hay trazabilidad real.',
+    q: '¿Qué pasa si mi catálogo de productos cambia frecuentemente?',
+    a: 'Pomely mantiene un catálogo vivo que puedes actualizar en cualquier momento — directamente en la plataforma, por importación de Excel o vía API. La IA siempre usa los precios y productos vigentes al armar cada cotización.',
   },
   {
-    q: '¿Cómo funciona el copiloto IA?',
-    a: 'El copiloto analiza tu repositorio de documentos, los compara contra los requisitos de tus certificaciones y detecta brechas: documentos vencidos, requisitos sin evidencia, procesos sin respaldo. Puedes consultarle en lenguaje natural qué falta antes de una auditoría específica.',
+    q: '¿Puedo personalizar el formato y diseño de mis cotizaciones?',
+    a: 'Sí. Puedes configurar el template con el logo de tu empresa, colores, condiciones comerciales, términos y cualquier campo adicional que necesites. Cada cotización sale con la identidad de tu empresa.',
   },
   {
-    q: '¿Cuánto tiempo toma implementar Documentia?',
-    a: 'Depende del volumen documental y la estructura de su sistema de gestión. Una implementación básica puede estar lista en 2-3 semanas. Acompañamos el proceso de carga inicial y configuración de la matriz de cumplimiento.',
+    q: '¿Cómo funciona la integración con Gmail y Outlook?',
+    a: 'Conectas tu correo de ventas con OAuth (sin compartir contraseñas). Pomely monitorea los correos entrantes, detecta los que son solicitudes de cotización y crea el caso automáticamente. Tú controlas qué correos procesa.',
   },
   {
-    q: '¿Los datos están seguros?',
-    a: 'Sí. Toda la información se almacena cifrada, con control de acceso por roles y auditoría completa de eventos. Cada acción queda registrada con usuario, fecha y motivo — exactamente lo que necesita para defender un hallazgo ante un auditor.',
+    q: '¿Es seguro conectar mi correo de ventas?',
+    a: 'Sí. La integración usa OAuth 2.0 — el estándar de la industria. Pomely solo lee los correos que tú autorices, nunca envía correos por su cuenta sin tu aprobación, y puedes revocar el acceso en cualquier momento.',
+  },
+  {
+    q: '¿Funciona para empresas pequeñas o solo para empresas grandes?',
+    a: 'Pomely está diseñado para ambos. Una PYME con 2 vendedores puede empezar en minutos con las plantillas de flujo predefinidas. Una empresa grande puede configurar flujos complejos, restricciones por rol y reportería avanzada. El producto escala contigo.',
   },
 ]
 </script>

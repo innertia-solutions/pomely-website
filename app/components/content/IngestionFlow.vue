@@ -6,10 +6,10 @@
         <!-- ── Left: Flow diagram ── -->
         <div class="relative flex flex-col items-center select-none">
 
-          <!-- File type pills -->
+          <!-- Input type pills -->
           <div class="flex flex-wrap justify-center gap-1.5 z-10 mb-4">
             <div
-              v-for="ft in fileTypes"
+              v-for="ft in inputTypes"
               :key="ft.label"
               class="flex items-center gap-1 border rounded-md px-2 py-1 text-[10px] font-semibold bg-white dark:bg-stone-900"
               :style="{ borderColor: ft.color + '44', color: ft.color }"
@@ -21,7 +21,7 @@
             </div>
           </div>
 
-          <!-- Sources: 4 columnas compactas -->
+          <!-- Sources: 4 columnas -->
           <div class="w-full grid grid-cols-4 gap-2 z-10">
             <div
               v-for="src in sources"
@@ -43,55 +43,54 @@
             <div class="absolute top-0 w-px h-5 bg-stone-200 dark:bg-stone-700" style="left:87.5%" />
             <div class="absolute h-px bg-stone-200 dark:bg-stone-700" style="top:20px; left:12.5%; right:12.5%" />
             <div class="absolute left-1/2 -translate-x-1/2 w-px h-5 bg-stone-200 dark:bg-stone-700" style="top:20px" />
-            <div class="absolute left-1/2 top-[38px] -translate-x-1/2 w-2 h-2 rounded-full bg-violet-400 ring-2 ring-stone-50 dark:ring-stone-900" />
+            <div class="absolute left-1/2 top-[38px] -translate-x-1/2 w-2 h-2 rounded-full bg-orange-400 ring-2 ring-stone-50 dark:ring-stone-900" />
           </div>
 
-          <!-- Ingestor de conocimiento -->
+          <!-- Motor de cotización -->
           <div class="w-full max-w-xs rounded-2xl bg-stone-900 dark:bg-stone-800 border border-stone-700 shadow-xl z-10 overflow-hidden">
             <div class="px-4 py-3 flex items-center gap-3 border-b border-stone-700/60">
-              <div class="w-8 h-8 rounded-xl bg-violet-600 flex items-center justify-center shrink-0 relative">
+              <div class="w-8 h-8 rounded-xl bg-orange-600 flex items-center justify-center shrink-0 relative">
                 <UIcon name="i-lucide-hard-drive-upload" class="size-4 text-white" />
                 <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 ring-2 ring-stone-900 animate-pulse" />
               </div>
               <div>
-                <p class="text-xs font-bold text-white">Ingestor de conocimiento</p>
-                <p class="text-[10px] text-stone-400">OCR · Clasificación · Indexación</p>
+                <p class="text-xs font-bold text-white">Motor de cotización</p>
+                <p class="text-[10px] text-stone-400">Lectura · Extracción · Clasificación</p>
               </div>
             </div>
-            <!-- Animated processing rows -->
             <div class="px-4 py-3 space-y-2">
-              <div v-for="(doc, i) in processingDocs" :key="doc.name" class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full shrink-0" :class="doc.done ? 'bg-green-400' : 'bg-violet-400 animate-pulse'" />
+              <div v-for="doc in processingDocs" :key="doc.name" class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full shrink-0" :class="doc.done ? 'bg-green-400' : 'bg-orange-400 animate-pulse'" />
                 <span class="text-[10px] text-stone-400 flex-1 truncate">{{ doc.name }}</span>
-                <span class="text-[9px]" :class="doc.done ? 'text-green-400' : 'text-violet-400'">{{ doc.status }}</span>
+                <span class="text-[9px]" :class="doc.done ? 'text-green-400' : 'text-orange-400'">{{ doc.status }}</span>
               </div>
             </div>
             <div class="px-4 py-2 border-t border-stone-800 flex items-center justify-between">
-              <span class="text-[10px] text-stone-500">Total procesados</span>
-              <span class="text-xs font-bold text-violet-400 font-mono scanning-counter">2.847</span>
+              <span class="text-[10px] text-stone-500">Cotizaciones este mes</span>
+              <span class="text-xs font-bold text-orange-400 font-mono">1.243</span>
             </div>
           </div>
 
-          <!-- Connector ingestor → IA -->
+          <!-- Connector motor → IA -->
           <div class="relative flex flex-col items-center z-0">
             <div class="w-px h-5 bg-stone-200 dark:bg-stone-700" />
-            <div class="w-2 h-2 rounded-full bg-violet-400 ring-2 ring-stone-50 dark:ring-stone-900" />
+            <div class="w-2 h-2 rounded-full bg-orange-400 ring-2 ring-stone-50 dark:ring-stone-900" />
             <div class="w-px h-5 bg-stone-200 dark:bg-stone-700" />
           </div>
 
-          <!-- IA Motor de conocimiento -->
-          <div class="w-full max-w-xs rounded-2xl bg-violet-950 border border-violet-800/60 shadow-lg shadow-violet-900/30 z-10 overflow-hidden">
+          <!-- IA Motor -->
+          <div class="w-full max-w-xs rounded-2xl bg-orange-950 border border-orange-800/60 shadow-lg shadow-orange-900/30 z-10 overflow-hidden">
             <div class="px-4 py-3 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-xl bg-violet-600/80 flex items-center justify-center shrink-0">
+              <div class="w-8 h-8 rounded-xl bg-orange-600/80 flex items-center justify-center shrink-0">
                 <UIcon name="i-lucide-brain-circuit" class="size-4 text-white" />
               </div>
               <div class="flex-1 min-w-0">
-                <p class="text-xs font-bold text-violet-100">IA · Motor de conocimiento</p>
-                <p class="text-[10px] text-violet-400">Análisis semántico · Mapeo normativo</p>
+                <p class="text-xs font-bold text-orange-100">IA · Motor de cotización</p>
+                <p class="text-[10px] text-orange-400">Catálogo · Precios · Historial</p>
               </div>
             </div>
             <div class="px-4 pb-3 flex flex-wrap gap-1.5">
-              <span v-for="tag in aiTags" :key="tag" class="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-violet-900/60 text-violet-300 border border-violet-800/50">{{ tag }}</span>
+              <span v-for="tag in aiTags" :key="tag" class="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-orange-900/60 text-orange-300 border border-orange-800/50">{{ tag }}</span>
             </div>
           </div>
 
@@ -121,29 +120,28 @@
           </div>
 
         </div>
-        <!-- ── End diagram ── -->
 
-        <!-- ── Right: Text + features ── -->
+        <!-- ── Right: Text ── -->
         <div>
-          <p class="mb-3 font-mono text-xs text-stone-400 uppercase tracking-widest">Ingesta documental</p>
+          <p class="mb-3 font-mono text-xs text-stone-400 uppercase tracking-widest">Captura omnicanal</p>
           <h2 class="font-bold text-2xl md:text-3xl text-stone-900 dark:text-stone-100 leading-snug">
-            Distintas fuentes,<br />un solo repositorio.
+            Pomely escucha<br />donde llegan los pedidos.
           </h2>
-          <p class="mt-1 text-lg font-semibold text-violet-600 dark:text-violet-400">
-            La IA organiza y analiza.
+          <p class="mt-1 text-lg font-semibold text-orange-600 dark:text-orange-400">
+            La IA entiende y cotiza.
           </p>
           <p class="mt-4 text-stone-500 dark:text-stone-400 leading-relaxed">
-            Tus documentos en un solo lugar seguro, analizados, versionados y gestionados — listos para ser cruzados con tus auditorías por Documentia.
+            Llega un audio por WhatsApp, un correo con un Excel adjunto o un formulario web — Pomely los procesa todos, extrae la información y arma el caso de cotización automáticamente.
           </p>
 
           <div class="mt-8 grid grid-cols-2 gap-4">
             <div
               v-for="feat in features"
               :key="feat.title"
-              class="group p-4 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-violet-200 dark:hover:border-violet-800 transition-all duration-200"
+              class="group p-4 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-orange-200 dark:hover:border-orange-800 transition-all duration-200"
             >
-              <div class="w-8 h-8 rounded-lg bg-stone-50 dark:bg-stone-700 border border-stone-200 dark:border-stone-600 flex items-center justify-center mb-3 group-hover:bg-violet-50 group-hover:border-violet-100 transition-colors">
-                <UIcon :name="feat.icon" class="size-4 text-stone-400 group-hover:text-violet-600 transition-colors" />
+              <div class="w-8 h-8 rounded-lg bg-stone-50 dark:bg-stone-700 border border-stone-200 dark:border-stone-600 flex items-center justify-center mb-3 group-hover:bg-orange-50 group-hover:border-orange-100 transition-colors">
+                <UIcon :name="feat.icon" class="size-4 text-stone-400 group-hover:text-orange-600 transition-colors" />
               </div>
               <p class="text-sm font-semibold text-stone-900 dark:text-stone-100 mb-1">{{ feat.title }}</p>
               <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">{{ feat.desc }}</p>
@@ -159,100 +157,97 @@
 <script setup lang="ts">
 import { defineComponent, h } from 'vue'
 
-// Icons
-const GoogleDriveIcon = defineComponent({
+const WhatsAppIcon = defineComponent({
+  render: () => h('svg', { viewBox: '0 0 24 24', class: 'w-4 h-4', fill: '#25D366' }, [
+    h('path', { d: 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z' }),
+    h('path', { d: 'M11.5 2C6.253 2 2 6.253 2 11.5c0 1.89.52 3.658 1.428 5.168L2 22l5.5-1.404A9.448 9.448 0 0011.5 21c5.247 0 9.5-4.253 9.5-9.5S16.747 2 11.5 2zm0 17.25a7.718 7.718 0 01-3.944-1.082l-.283-.168-2.928.748.778-2.845-.185-.292A7.699 7.699 0 013.75 11.5c0-4.273 3.477-7.75 7.75-7.75s7.75 3.477 7.75 7.75-3.477 7.75-7.75 7.75z' }),
+  ]),
+})
+
+const GmailIcon = defineComponent({
   render: () => h('svg', { viewBox: '0 0 24 24', class: 'w-4 h-4' }, [
-    h('path', { d: 'M4.5 19.5l3-5.25H19.5L16.5 19.5H4.5z', fill: '#34A853' }),
-    h('path', { d: 'M8.25 6L4.5 12.75l3 5.25L11.25 12 8.25 6z', fill: '#FBBC05' }),
-    h('path', { d: 'M15.75 6H8.25L11.25 12h7.5l-3-6z', fill: '#4285F4' }),
+    h('path', { d: 'M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z', fill: '#EA4335' }),
   ]),
 })
 
-const OneDriveIcon = defineComponent({
+const OutlookIcon = defineComponent({
   render: () => h('svg', { viewBox: '0 0 24 24', class: 'w-4 h-4', fill: 'none' }, [
-    h('path', { d: 'M20.5 14.5a4 4 0 0 0-4-4 4 4 0 0 0-.5.03A5.5 5.5 0 0 0 5.5 13.5a3.5 3.5 0 0 0 .5 7h13a3 3 0 0 0 1.5-5.6V14.5z', fill: '#0078D4' }),
+    h('rect', { x: '2', y: '4', width: '20', height: '16', rx: '2', fill: '#0078D4' }),
+    h('path', { d: 'M2 8l10 6 10-6', stroke: 'white', 'stroke-width': '1.5', fill: 'none' }),
   ]),
 })
 
-const UploadIcon = defineComponent({
+const FormIcon = defineComponent({
   render: () => h('svg', { viewBox: '0 0 24 24', class: 'w-4 h-4', fill: 'none', stroke: '#78716c', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-    h('path', { d: 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' }),
-    h('polyline', { points: '17 8 12 3 7 8' }),
-    h('line', { x1: '12', y1: '3', x2: '12', y2: '15' }),
-  ]),
-})
-
-const DatabaseIcon = defineComponent({
-  render: () => h('svg', { viewBox: '0 0 24 24', class: 'w-4 h-4', fill: 'none', stroke: '#6366f1', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-    h('ellipse', { cx: '12', cy: '5', rx: '9', ry: '3' }),
-    h('path', { d: 'M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5' }),
-    h('path', { d: 'M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3' }),
+    h('path', { d: 'M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z' }),
+    h('polyline', { points: '14 2 14 8 20 8' }),
+    h('line', { x1: '8', y1: '13', x2: '16', y2: '13' }),
+    h('line', { x1: '8', y1: '17', x2: '16', y2: '17' }),
   ]),
 })
 
 const sources = [
-  { label: 'Base de datos', icon: DatabaseIcon, iconBg: '#eef2ff' },
-  { label: 'Google Drive', icon: GoogleDriveIcon, iconBg: '#f8f9fa' },
-  { label: 'OneDrive', icon: OneDriveIcon, iconBg: '#e8f4fd' },
-  { label: 'Archivos', icon: UploadIcon, iconBg: '#f5f4f3' },
+  { label: 'WhatsApp', icon: WhatsAppIcon, iconBg: '#dcfce7' },
+  { label: 'Gmail', icon: GmailIcon, iconBg: '#fef2f2' },
+  { label: 'Outlook', icon: OutlookIcon, iconBg: '#eff6ff' },
+  { label: 'Formulario', icon: FormIcon, iconBg: '#f5f4f3' },
 ]
 
-const fileTypes = [
+const inputTypes = [
+  { label: 'Audio', color: '#25D366' },
+  { label: 'Imagen', color: '#f97316' },
   { label: 'PDF', color: '#dc2626' },
-  { label: 'Word', color: '#2563eb' },
-  { label: 'Excel', color: '#16a34a' },
-  { label: 'Imágenes', color: '#9333ea' },
-  { label: 'Correos', color: '#d97706' },
-  { label: 'XML', color: '#0891b2' },
+  { label: 'Email', color: '#0078D4' },
+  { label: 'Texto', color: '#78716c' },
 ]
 
 const processingDocs = [
-  { name: 'Manual de calidad SGI v3.pdf', status: '✓ listo', done: true },
-  { name: 'Proc. inspección Planta Norte', status: 'indexando…', done: false },
-  { name: 'Política HSSEQ 2025.docx', status: 'en cola', done: false },
+  { name: 'Pedido Constructora Sur (audio WA)', status: '✓ listo', done: true },
+  { name: 'Solicitud Retail Norte — correo', status: 'extrayendo…', done: false },
+  { name: 'Formulario web — Clínica Providencia', status: 'en cola', done: false },
 ]
 
-const aiTags = ['ISO 9001', 'ISO 45001', 'SGI', 'Cláusulas', 'Evidencia', 'Versiones']
+const aiTags = ['Catálogo', 'Precios', 'Historial', 'Márgenes', 'Condiciones', 'Cliente']
 
 const outputs = [
   {
-    label: 'Resultado',
-    icon: 'i-lucide-file-check-2',
-    cardClass: 'bg-green-50 dark:bg-green-900/20 border-green-100 dark:border-green-900',
-    iconBg: 'bg-green-100 dark:bg-green-900/40',
-    iconColor: 'text-green-600 dark:text-green-400',
-    labelColor: 'text-green-700 dark:text-green-400',
+    label: 'PDF',
+    icon: 'i-lucide-file-text',
+    cardClass: 'bg-red-50 dark:bg-red-900/20 border-red-100 dark:border-red-900',
+    iconBg: 'bg-red-100 dark:bg-red-900/40',
+    iconColor: 'text-red-600 dark:text-red-400',
+    labelColor: 'text-red-700 dark:text-red-400',
   },
   {
-    label: 'Brechas',
-    icon: 'i-lucide-scan-search',
-    cardClass: 'bg-amber-50 dark:bg-amber-900/20 border-amber-100 dark:border-amber-900',
-    iconBg: 'bg-amber-100 dark:bg-amber-900/40',
-    iconColor: 'text-amber-600 dark:text-amber-400',
-    labelColor: 'text-amber-700 dark:text-amber-400',
-  },
-  {
-    label: 'Análisis',
-    icon: 'i-lucide-chart-no-axes-combined',
+    label: 'Email',
+    icon: 'i-lucide-mail',
     cardClass: 'bg-blue-50 dark:bg-blue-900/20 border-blue-100 dark:border-blue-900',
     iconBg: 'bg-blue-100 dark:bg-blue-900/40',
     iconColor: 'text-blue-600 dark:text-blue-400',
     labelColor: 'text-blue-700 dark:text-blue-400',
   },
   {
-    label: 'Índice',
-    icon: 'i-lucide-library',
-    cardClass: 'bg-violet-50 dark:bg-violet-900/20 border-violet-100 dark:border-violet-900',
-    iconBg: 'bg-violet-100 dark:bg-violet-900/40',
-    iconColor: 'text-violet-600 dark:text-violet-400',
-    labelColor: 'text-violet-700 dark:text-violet-400',
+    label: 'Link web',
+    icon: 'i-lucide-link',
+    cardClass: 'bg-green-50 dark:bg-green-900/20 border-green-100 dark:border-green-900',
+    iconBg: 'bg-green-100 dark:bg-green-900/40',
+    iconColor: 'text-green-600 dark:text-green-400',
+    labelColor: 'text-green-700 dark:text-green-400',
+  },
+  {
+    label: 'WhatsApp',
+    icon: 'i-lucide-message-circle',
+    cardClass: 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-100 dark:border-emerald-900',
+    iconBg: 'bg-emerald-100 dark:bg-emerald-900/40',
+    iconColor: 'text-emerald-600 dark:text-emerald-400',
+    labelColor: 'text-emerald-700 dark:text-emerald-400',
   },
 ]
 
 const features = [
-  { icon: 'i-lucide-scan-text', title: 'OCR e indexación', desc: 'Extrae texto de PDFs escaneados, imágenes y archivos legacy.' },
-  { icon: 'i-lucide-tags', title: 'Clasificación automática', desc: 'Categoriza por tipo, proceso y relevancia normativa sin intervención.' },
-  { icon: 'i-lucide-git-merge', title: 'Deduplicación', desc: 'Detecta versiones duplicadas y consolida el documento vigente.' },
-  { icon: 'i-lucide-link-2', title: 'Mapeo a requisitos', desc: 'Vincula automáticamente documentos a cláusulas de tu sistema de gestión.' },
+  { icon: 'i-lucide-mic', title: 'Audio e imagen', desc: 'Entiende pedidos en audio de WhatsApp o fotos de listas escritas a mano.' },
+  { icon: 'i-lucide-mail-open', title: 'Lectura de correos', desc: 'Conecta Gmail u Outlook y Pomely procesa los correos de cotización automáticamente.' },
+  { icon: 'i-lucide-package-search', title: 'Extracción de ítems', desc: 'Identifica productos, cantidades y condiciones sin importar el formato del pedido.' },
+  { icon: 'i-lucide-send', title: 'Multicanal de salida', desc: 'Envía la cotización por PDF, email, link web o directamente por WhatsApp.' },
 ]
 </script>

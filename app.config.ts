@@ -3,7 +3,7 @@ export default defineAppConfig({
 
     ui: {
         colors: {
-            primary: 'violet',
+            primary: 'orange',
             secondary: 'stone',
             neutral: 'stone',
         },
@@ -17,8 +17,8 @@ export default defineAppConfig({
     },
 
     docus: {
-        title: 'Documentia',
-        description: 'Plataforma de gestión documental y cumplimiento con IA para empresas que se auditan.',
+        title: 'Pomely',
+        description: 'Sistema de cotización con IA. Captura pedidos, arma cotizaciones automáticamente y controla tus flujos comerciales.',
 
         image: '/isologo.png',
 
@@ -29,7 +29,7 @@ export default defineAppConfig({
                 light: '/isologo.png',
                 dark: '/isologo.png',
             },
-            title: 'Documentia',
+            title: 'Pomely',
             showTitle: true,
             colorMode: false,
         },
@@ -46,7 +46,7 @@ export default defineAppConfig({
 
         footer: {
             credits: {
-                text: '© 2026 Documentia. Todos los derechos reservados.',
+                text: '© 2026 Pomely. Todos los derechos reservados.',
                 href: '',
             },
             textLinks: [],
