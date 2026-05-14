@@ -28,7 +28,7 @@
               <div
                 class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 relative z-10 transition-all duration-500 text-xs font-bold border"
                 :class="activeSteps[i]
-                  ? 'bg-white dark:bg-stone-950 border-rose-400 text-rose-500'
+                  ? 'bg-white dark:bg-stone-950 border-rose-300 text-rose-400'
                   : 'bg-white dark:bg-stone-950 border-stone-200 dark:border-stone-800 text-stone-300 dark:text-stone-700'"
               >
                 {{ String(i + 1).padStart(2, '0') }}
@@ -69,7 +69,7 @@
               <p class="text-[9px] font-bold text-stone-400 uppercase tracking-widest mb-2">Pomely</p>
               <div v-for="item in sidebar" :key="item.label"
                 class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-[11px] font-medium transition-colors"
-                :class="item.active ? 'bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300' : 'text-stone-500 dark:text-stone-400'"
+                :class="item.active ? 'bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300' : 'text-stone-500 dark:text-stone-400'"
               >
                 <UIcon :name="item.icon" class="size-3 shrink-0" />
                 {{ item.label }}
@@ -85,7 +85,7 @@
                   <p class="text-[11px] text-stone-400 font-mono uppercase tracking-wide">Cotización</p>
                   <p class="text-sm font-bold text-stone-800 dark:text-stone-100">COT-2025-084 · Constructora Sur</p>
                 </div>
-                <span class="text-[10px] font-semibold bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 border border-rose-100 dark:border-rose-800 px-2 py-0.5 rounded-full">En negociación</span>
+                <span class="text-[10px] font-semibold bg-rose-50 dark:bg-rose-900/30 text-rose-500 dark:text-rose-300 border border-rose-100 dark:border-rose-800 px-2 py-0.5 rounded-full">En negociación</span>
               </div>
 
               <!-- Line items -->
@@ -108,7 +108,7 @@
                   <p class="text-sm font-black text-stone-900 dark:text-stone-100">$4.200.000</p>
                 </div>
                 <div class="flex gap-2">
-                  <div class="flex-1 text-center py-1.5 rounded-lg bg-rose-600 text-white text-[10px] font-semibold cursor-default">Enviar seguimiento</div>
+                  <div class="flex-1 text-center py-1.5 rounded-lg bg-rose-500 text-white text-[10px] font-semibold cursor-default">Enviar seguimiento</div>
                   <div class="flex-1 text-center py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-stone-500 text-[10px] font-medium cursor-default">Exportar PDF</div>
                 </div>
               </div>

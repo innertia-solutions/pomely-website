@@ -26,7 +26,7 @@
             <span
               class="text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
               :class="col.highlight
-                ? 'bg-rose-600 text-white'
+                ? 'bg-rose-500 text-white'
                 : 'bg-stone-100 dark:bg-stone-700 text-stone-500 dark:text-stone-400'"
             >{{ col.label }}</span>
           </div>
@@ -38,7 +38,7 @@
               class="flex items-start gap-3"
             >
               <span class="shrink-0 mt-0.5">
-                <svg v-if="item.type === 'yes'" class="size-4 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg v-if="item.type === 'yes'" class="size-4 text-rose-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <svg v-else-if="item.type === 'no'" class="size-4 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">

@@ -20,7 +20,7 @@
             <div class="mt-7 flex flex-wrap items-center gap-3">
               <a
                 :href="primaryButton.to"
-                class="py-2.5 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-rose-600 text-white hover:bg-rose-700 shadow-md hover:shadow-none transition-all focus:outline-none"
+                class="py-2.5 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-rose-500 text-white hover:bg-rose-600 shadow-md hover:shadow-none transition-all focus:outline-none"
               >
                 {{ primaryButton.text }}
               </a>
@@ -59,7 +59,7 @@
                 <!-- Browser bar -->
                 <div class="flex items-center gap-2 px-4 py-2.5 bg-stone-50 dark:bg-stone-800 border-b border-stone-200 dark:border-stone-700">
                   <div class="flex gap-1.5">
-                    <div class="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                    <div class="w-2.5 h-2.5 rounded-full bg-rose-300" />
                     <div class="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                     <div class="w-2.5 h-2.5 rounded-full bg-green-400" />
                   </div>
@@ -80,7 +80,7 @@
                         v-for="item in sidebarItems"
                         :key="item.label"
                         class="flex items-center gap-1.5 px-2 py-1.5 rounded-md text-[11px] transition-colors"
-                        :class="item.active ? 'bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400 font-medium' : 'text-stone-500 dark:text-stone-400'"
+                        :class="item.active ? 'bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300 font-medium' : 'text-stone-500 dark:text-stone-400'"
                       >
                         <svg class="size-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" :d="item.icon" />
@@ -97,7 +97,7 @@
                           <h3 class="text-xs font-semibold text-stone-800 dark:text-stone-200 truncate">Cotizaciones activas</h3>
                           <p class="text-[10px] text-stone-400">Mayo 2025 · 14 cotizaciones</p>
                         </div>
-                        <span class="px-2 py-0.5 rounded-full text-[9px] font-medium bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400 border border-rose-100 dark:border-rose-800 shrink-0">$28.4M pipeline</span>
+                        <span class="px-2 py-0.5 rounded-full text-[9px] font-medium bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300 border border-rose-100 dark:border-rose-800 shrink-0">$28.4M pipeline</span>
                       </div>
 
                       <!-- Quote list -->
@@ -129,7 +129,7 @@
               <!-- AI badge floating -->
               <div class="absolute -bottom-3 -left-3 bg-stone-900 dark:bg-stone-800 text-white rounded-xl px-3.5 py-2.5 shadow-xl border border-stone-700 dark:border-stone-600 text-xs max-w-xs z-10">
                 <div class="flex items-start gap-2.5">
-                  <div class="w-6 h-6 rounded-full bg-rose-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div class="w-6 h-6 rounded-full bg-rose-500 flex items-center justify-center shrink-0 mt-0.5">
                     <svg class="size-3.5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
                     </svg>
@@ -166,7 +166,7 @@ const sidebarItems = [
 ]
 
 const quotes = [
-  { client: 'Constructora del Sur', amount: '$4.200.000', status: 'Negociación', color: '#f97316', statusClass: 'bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400' },
+  { client: 'Constructora del Sur', amount: '$4.200.000', status: 'Negociación', color: '#f97316', statusClass: 'bg-rose-50 dark:bg-rose-900/30 text-rose-500 dark:text-rose-300' },
   { client: 'Retail Zona Norte', amount: '$890.000', status: 'Enviada', color: '#6366f1', statusClass: 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400' },
   { client: 'Minera Los Andes', amount: '$12.500.000', status: 'Cerrada', color: '#22c55e', statusClass: 'bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400' },
   { client: 'Clínica Providencia', amount: '$320.000', status: 'Armando', color: '#f59e0b', statusClass: 'bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400' },
@@ -174,7 +174,7 @@ const quotes = [
 
 const metrics = [
   { value: '8', label: 'Cotizaciones enviadas', color: 'text-stone-800 dark:text-stone-200' },
-  { value: '68%', label: 'Tasa de apertura', color: 'text-rose-600' },
+  { value: '68%', label: 'Tasa de apertura', color: 'text-rose-500' },
   { value: '3', label: 'Cierres', color: 'text-green-600' },
 ]
 </script>
